@@ -7,8 +7,8 @@ const Home = (props) => {
   return (
     <div>
       <Header />
-      <Link to="/offers/:id">Offres</Link>
-      <main>
+      
+      <main className="mainHome"> 
         <section className="homeStart">
           <img alt="Femmefaisanttri" src={Makeorder} />
           <div className="startSell">
@@ -19,25 +19,30 @@ const Home = (props) => {
 
         <div className="newOffers">
           {props.data.offers.map((clothe, index) => (
-            <Link to={"/offers/"+clothe._id}>
+            
               <article key={clothe._id}>
                 <div className="ownerClothe">
+                    
                   <img
                     alt={"avatar de " + clothe.owner.account.username}
                     src={clothe.owner.account.avatar.url}
                   />
                   <p className="pseudo">{clothe.owner.account.username}</p>
                 </div>
+                <Link to={"/offers/"+clothe._id}>
                 <img
                   className="pictureClothe"
                   alt={clothe.product_name}
                   src={clothe.product_pictures[0].secure_url}
                 />
-                <p className="price">{clothe.product_price}</p>
+                <div className="down">
+                <p className="priceHome">{clothe.product_price+" €"}</p>
                 <p className="size">{clothe.product_details[1].TAILLE}</p>
                 <p className="brand">{clothe.product_details[0].MARQUE}</p>
+                </div>
+                </Link>
               </article>
-            </Link>
+            
           ))}
         </div>
       </main>

@@ -11,24 +11,49 @@ const Offer = (props) => {
   return (
     <div>
       <Header />
-      <main>
-        <img
-          className="clothe"
-          alt={props.data.offers[index].product_name}
-          src={props.data.offers[index].product_pictures[0].secure_url}
-        />
-        <section className="infoProduct">
-          <p className="price">{props.data.offers[index].product_price}</p>
-          <div className="generalInfo">
-            {props.data.offers[index].product_details.map((info, index) => (
-              <div>
-                <p>{info.keys}</p>
-                <p>{info.values}</p>
+      <main className="mainOffer">
+        <div className="container">
+          <img
+            className="clothe"
+            alt={props.data.offers[index].product_name}
+            src={props.data.offers[index].product_pictures[0].secure_url}
+          />
+          <section className="infoProduct">
+            <p className="price">{props.data.offers[index].product_price+" €"}</p>
+            <div className="generalInfo">
+              {props.data.offers[index].product_details.map((info, i) => {
+                const [[key, value]] = Object.entries(info);
+                return (
+                  <div key={i}>
+                    <p className="key">{key}</p>
+                    <p className="value">{value}</p>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="TitleandSeller">
+              <p className="productName">
+                {props.data.offers[index].product_name}
+              </p>
+              <p className="productDescription">
+                {props.data.offers[index].product_description}
+              </p>
+              <div className="seller">
+                <img
+                  alt={
+                    "avatar de " +
+                    props.data.offers[index].owner.account.username
+                  }
+                  src={props.data.offers[index].owner.account.avatar.secure_url}
+                />
+                <p className="pseudo">
+                  {props.data.offers[index].owner.account.username}
+                </p>
               </div>
-            ))}
-          </div>
-        </section>
-        <Link to="/">Home</Link>
+              <butto className="ButtonOfferBuy">Acheter</butto>
+            </div>
+          </section>
+        </div>
       </main>
     </div>
   );
