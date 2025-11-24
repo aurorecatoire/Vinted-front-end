@@ -1,10 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-
-
-import Header from "../components/Header/Header";
-import Makeorder from "../img/imageaccueil.jpg";
+import Makeorder from "../../assets/img/imageaccueil.jpg";
 import "./Home.css";
 
 const Home = () => {
@@ -33,8 +30,6 @@ const Home = () => {
         <p>Chargement...</p>
       ) : (
         <>
-          <Header />
-
           <main className="mainHome">
             <section className="homeStart">
               <img alt="Femme faisant du tri" src={Makeorder} />
@@ -65,10 +60,18 @@ const Home = () => {
                     <div className="down">
                       <p className="priceHome">{clothe.product_price} €</p>
                       <p className="size">
-                        {clothe.product_details.find((element) => element.TAILLE)?.TAILLE}
+                        {
+                          clothe.product_details.find(
+                            (element) => element.TAILLE
+                          )?.TAILLE
+                        }
                       </p>
                       <p className="brand">
-                        {clothe.product_details.find((element) => element.MARQUE)?.MARQUE}
+                        {
+                          clothe.product_details.find(
+                            (element) => element.MARQUE
+                          )?.MARQUE
+                        }
                       </p>
                     </div>
                   </Link>

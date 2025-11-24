@@ -1,0 +1,54 @@
+.logIn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.form_logIn {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 275px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.form_logIn input {
+  border: none;
+  outline: none;
+  border-bottom: 0.5px solid #ff0000;
+  width: 100%;
+  height: 35px;
+  font-size: 16px;
+  color: black;
+}
+
+.connexion {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.logIn button {
+  height: 40px;
+  width: 275px;
+  background-color: #2cb1ba;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.no_account {
+  color: #2cb1ba;
+  margin-top: 20px;
+  font-size: 13px;
+}
+
+a {
+  text-decoration: none;
+}
