@@ -1,20 +1,30 @@
+/* structure générale */
 .logIn {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 }
 
+/* titre*/
+.connexion {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+/* formulaire */
 .form_logIn {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   width: 275px;
   margin: 0 auto;
   margin-bottom: 30px;
 }
 
+/* Champs du formulaire */
 .form_logIn input {
   border: none;
   outline: none;
@@ -25,14 +35,7 @@
   color: black;
 }
 
-.connexion {
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: 30px;
-  font-size: 26px;
-  font-weight: 400;
-}
-
+/* Bouton de connexion */
 .logIn button {
   height: 40px;
   width: 275px;
@@ -43,6 +46,7 @@
   font-size: 15px;
 }
 
+/* liens */
 .no_account {
   color: #2cb1ba;
   margin-top: 20px;

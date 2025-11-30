@@ -42,7 +42,7 @@ const LogIn = ({ setUser }) => {
   return (
     <main className="logIn">
       <h1 className="connexion">Se connecter</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}> {/* mise en place du formulaire*/}
         <div className="form_logIn">
           <label htmlFor="email" />
           <input

@@ -21,7 +21,7 @@ const Header = ({ token, setUser }) => {
           />
         </div>
         {token ? (
-          <button
+          <button className="deconnection"
             onClick={() => {
               setUser(null);
             }}

@@ -2,12 +2,13 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import "./Offer.css";
+import { useNavigate } from "react-router-dom";
 
-const Offer = () => {
+const Offer = ({ token }) => {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-
   const { id } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -69,7 +70,21 @@ const Offer = () => {
                   <p className="pseudo">{data.owner.account.username}</p>
                 </div>
 
-                <button className="ButtonOfferBuy">Acheter</button>
+                <button
+                  className="ButtonOfferBuy"
+                  onClick={() => {
+                    token
+                      ? navigate("/payment", {
+                          state: {
+                            title: data.product_name,
+                            price: data.product_price,
+                          },
+                        })
+                      : navigate("/login");
+                  }}
+                >
+                  Acheter
+                </button>
               </div>
             </section>
           </>

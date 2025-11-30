@@ -1,3 +1,4 @@
+/* structure générale */
 header {
   width: 100%;
   background-color: white;
@@ -8,19 +9,18 @@ header {
   max-width: 1280px;
   margin: 0 auto;
   padding: 10px 0;
-
   display: flex;
-  align-items: center;  
-  justify-content: space-between; 
+  align-items: center;
+  justify-content: space-between;
   gap: 20px;
 }
 
-/* ---- SEARCH BAR ---- */
-
+/* barre de recherche */
 .searchContainer {
   position: relative;
-  flex: 1; 
+  flex: 1;
   max-width: 630px;
+  padding-left: 30px;
 }
 
 .searchContainer input {
@@ -43,29 +43,40 @@ header {
   font-size: 14px;
 }
 
-/* ---- BUTTONS ---- */
-
+/* navigation */
 .buttonsOfHeader {
-  display: flex; 
-  gap: 10px; 
-}
-
-.buttonsOfHeader button,
-.sellyourobjects {
-  border-radius: 10px;
-  height: 30px;
-  width: 115px;
-  font-size: 12px;
+  display: flex;
+  gap: 10px;
 }
 
 .buttonsOfHeader button {
   color: #44b1ba;
   border: 1px solid #44b1ba;
   background-color: white;
+  border-radius: 10px;
+  height: 30px;
+  width: 115px;
+  font-size: 12px;
 }
 
+/* bouton de déconnection*/
+.deconnection {
+  color: white;
+  background-color: red;
+  border-radius: 10px;
+  height: 30px;
+  width: 115px;
+  font-size: 12px;
+  border: none;
+}
+
+/* bouton pour vendre */
 .sellyourobjects {
   color: white;
   background-color: #44b1ba;
   border: none;
+  border-radius: 10px;
+  height: 30px;
+  width: 115px;
+  font-size: 12px;
 }

@@ -1,0 +1,152 @@
+/* Structure générale */
+.publish {
+  background-color: #ebedee;
+  min-height: 100vh;
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+}
+
+.container_publish {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.publish h1 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Formulaire */
+.form_publish {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.form_publish section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.border_bottom {
+  border-bottom: 1px solid #ebedee;
+  padding-bottom: 10px;
+}
+
+/* Labels et inputs  */
+label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+input[type="text"],
+input[type="file"],
+.price {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+input[type="text"]:hover,
+input[type="file"]:hover {
+  border-color: #44b1ba;
+}
+
+/* Upload image  */
+.picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.file_picture {
+  border: 2px dashed #44b1ba;
+  border-radius: 10px;
+  color: #44b1ba;
+  font-size: 24px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.picture_download {
+  display: none;
+}
+
+.file_picture:hover {
+  background-color: rgba(68, 177, 186, 0.1);
+}
+
+/* Prix et échange  */
+.price_exchange {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.price_exchange > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox_exchange {
+  width: 20px;
+  height: 20px;
+}
+
+.exchange span {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Bouton  */
+.publish button {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #44b1ba;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.publish button:hover {
+  background-color: #36929e;
+}
+
+/* Mobile  */
+@media (max-width: 768px) {
+  .price_exchange {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  input[type="text"],
+  .price {
+    width: 100%;
+  }
+}

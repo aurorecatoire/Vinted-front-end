@@ -1,3 +1,4 @@
+/* structure générale */
 .mainHome {
   display: flex;
   flex-direction: column;
@@ -5,10 +6,7 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-/* --------------------
-Homestart, la section en haut de la page d'accueil
-________________________ */
-
+/* home start */
 .homeStart {
   height: 455px;
   position: relative;
@@ -19,8 +17,7 @@ ________________________ */
   width: 100vw;
   height: 100%;
   object-fit: cover;
-  font-size: 34px;
-  object-position: center 30%; /* centre horizontal, vertical 30% */
+  object-position: center 30%;
 }
 
 .startSell {
@@ -31,9 +28,10 @@ ________________________ */
   position: relative;
   background-color: white;
   width: 360px;
+  font-size: 30px;
+  padding-right: 10px;
   height: 220px;
   box-shadow: 0 0 2px #1111113d;
-  font-size: 34px;
   left: 200px;
   top: 100px;
 }
@@ -49,15 +47,12 @@ ________________________ */
   border: none;
 }
 
-/* --------------------
-Chaque article 
-________________________ */
-
+/* liste des articles*/
 .newOffers {
   max-width: 1280px;
   display: flex;
   flex-wrap: wrap;
-  margin: 30px auto auto;
+  margin: 30px auto 0;
   gap: 10px;
 }
 
@@ -66,38 +61,29 @@ ________________________ */
   color: inherit;
 }
 
+/* propriétaire */
 .ownerClothe {
   display: flex;
   gap: 10px;
   margin-bottom: 10px;
 }
 
-.ownerClothe p {
-  font-size: 12px;
-  color: #999999;
-}
 .ownerClothe img {
   width: 20px;
   height: 20px;
   object-fit: cover;
-  border-radius: 30px;
+  border-radius: 50%;
 }
 
+.ownerClothe p {
+  font-size: 12px;
+  color: #999999;
+}
+
+/* détails produits */
 .pictureClothe {
   width: 230px;
   height: 360px;
-}
-
-.priceHome {
-  font-size: 14px;
-  color: black;
-  margin-top: 10px;
-}
-
-.size,
-.brand {
-  font-size: 12px;
-  color: #999999;
 }
 
 .down {
@@ -105,4 +91,15 @@ ________________________ */
   flex-direction: column;
   row-gap: 10px;
   margin-bottom: 30px;
+}
+
+.priceHome {
+  font-size: 14px;
+  color: black;
+}
+
+.size,
+.brand {
+  font-size: 12px;
+  color: #999999;
 }

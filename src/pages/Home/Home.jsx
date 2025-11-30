@@ -2,11 +2,13 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Makeorder from "../../assets/img/imageaccueil.jpg";
+import { useNavigate } from "react-router-dom";
 import "./Home.css";
 
-const Home = () => {
+const Home = ({token}) => {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const navigate=useNavigate()
 
   useEffect(() => {
     const fetchData = async () => {
@@ -36,7 +38,7 @@ const Home = () => {
 
               <div className="startSell">
                 <p>Prêts à faire du tri dans vos placards ?</p>
-                <button>Commencer à vendre</button>
+                <button onClick={()=>{token ? navigate("/publish"): navigate("/login")}}>Commencer à vendre</button>
               </div>
             </section>
 
